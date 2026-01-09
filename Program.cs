@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 using CadastroProdutos.Services;
 
+=======
+>>>>>>> dc09e66f2c63915e71135ab41b18c93afc6c3f9b
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,18 +18,27 @@ builder.Services.AddScoped<IProdutosService, ProdutosService>();
 
 var app = builder.Build();
 
+<<<<<<< HEAD
 app.MapControllers();
 
+=======
+>>>>>>> dc09e66f2c63915e71135ab41b18c93afc6c3f9b
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+<<<<<<< HEAD
 
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
 app.UseAuthorization();
+=======
+}
+
+app.UseHttpsRedirection();
+>>>>>>> dc09e66f2c63915e71135ab41b18c93afc6c3f9b
 
 var summaries = new[]
 {
@@ -47,6 +59,7 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast");
 
+<<<<<<< HEAD
 app.MapGet("/test", () => "Esse é um endpoint de teste");
 
 var produtos = new List<Produto>()
@@ -101,12 +114,15 @@ app.MapDelete("/produtos/{id}", (int id) =>
     return Results.NoContent();
 });
 
+=======
+>>>>>>> dc09e66f2c63915e71135ab41b18c93afc6c3f9b
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
+<<<<<<< HEAD
     public class Produto
 {
     public int Id { get; set; }
@@ -114,3 +130,5 @@ record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
     public decimal Preco { get; set; }
     public int Estoque { get; set; }
 }
+=======
+>>>>>>> dc09e66f2c63915e71135ab41b18c93afc6c3f9b
