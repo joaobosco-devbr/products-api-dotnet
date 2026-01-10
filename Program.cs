@@ -1,9 +1,8 @@
-<<<<<<< HEAD
+using CadastroProdutos.Database;
 using CadastroProdutos.Services;
-
-=======
->>>>>>> dc09e66f2c63915e71135ab41b18c93afc6c3f9b
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -14,31 +13,34 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IProdutosService, ProdutosService>();
+builder.Services.AddScoped<IProdutosService, ProdutosDatabaseService>();
+
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite("Data Source=Produtos.db"));
 
 var app = builder.Build();
 
-<<<<<<< HEAD
+
 app.MapControllers();
 
-=======
->>>>>>> dc09e66f2c63915e71135ab41b18c93afc6c3f9b
+app.MapControllers();
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-<<<<<<< HEAD
+
 
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
 app.UseAuthorization();
-=======
-}
 
-app.UseHttpsRedirection();
->>>>>>> dc09e66f2c63915e71135ab41b18c93afc6c3f9b
+
+
+
+
 
 var summaries = new[]
 {
@@ -59,7 +61,7 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast");
 
-<<<<<<< HEAD
+
 app.MapGet("/test", () => "Esse é um endpoint de teste");
 
 var produtos = new List<Produto>()
@@ -114,15 +116,14 @@ app.MapDelete("/produtos/{id}", (int id) =>
     return Results.NoContent();
 });
 
-=======
->>>>>>> dc09e66f2c63915e71135ab41b18c93afc6c3f9b
+
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
-<<<<<<< HEAD
+
     public class Produto
 {
     public int Id { get; set; }
@@ -130,5 +131,4 @@ record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
     public decimal Preco { get; set; }
     public int Estoque { get; set; }
 }
-=======
->>>>>>> dc09e66f2c63915e71135ab41b18c93afc6c3f9b
+
