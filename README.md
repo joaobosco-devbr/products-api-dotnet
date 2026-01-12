@@ -1,8 +1,34 @@
-# Products API – ASP.NET Core
+<h1 align="center">Products API – ASP.NET Core (.NET 8)</h1>
 
-API REST desenvolvida em **ASP.NET Core (.NET 8)** para gerenciamento de produtos, com **autenticação JWT**, persistência de dados via **Entity Framework Core + SQLite** e documentação automática com **Swagger (OpenAPI)**.
+<p align="center">
+  <img src="https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet"/>
+  <img src="https://img.shields.io/badge/C%23-239120?logo=csharp"/>
+  <img src="https://img.shields.io/badge/EF%20Core-512BD4?logo=dotnet"/>
+  <img src="https://img.shields.io/badge/JWT-000000?logo=jsonwebtokens"/>
+  <img src="https://img.shields.io/badge/Swagger-85EA2D?logo=swagger"/>
+</p>
 
-O projeto foi construído com foco em **boas práticas**, **organização por camadas** e **clareza de código**, sendo ideal para fins educacionais, portfólio e evolução para ambientes de produção.
+<p align="center">
+  API REST para gerenciamento de produtos, com autenticação JWT, persistência via Entity Framework Core e documentação automática com Swagger (OpenAPI).
+</p>
+
+<hr/>
+
+<h2 align="center">🚀 Tecnologias Utilizadas</h2>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/ASP.NET_Core-512BD4?logo=dotnet"/>
+  <img src="https://img.shields.io/badge/C%23-239120?logo=csharp"/>
+  <img src="https://img.shields.io/badge/Entity_Framework_Core-512BD4"/>
+  <img src="https://img.shields.io/badge/SQLite-003B57?logo=sqlite"/>
+  <img src="https://img.shields.io/badge/JWT-000000?logo=jsonwebtokens"/>
+  <img src="https://img.shields.io/badge/Swagger-85EA2D?logo=swagger"/>
+</p>
+
+<hr/>
+
+
+Projeto desenvolvido com foco em **boas práticas**, **arquitetura em camadas** e **padrões utilizados em aplicações reais de produção**.
 
 ---
 
